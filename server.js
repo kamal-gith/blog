@@ -5,7 +5,7 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 const { PORT } = process.env;
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 5000;
 
 mongoose.connect('mongodb+srv://kamalai:o3KJeuK9w2FWIyWX@cluster0.mu2f9.mongodb.net/VolunteerDB?authSource=admin&replicaSet=atlas-9dyp7m-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
@@ -22,4 +22,4 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
-app.listen(7000)
+app.listen(5000)
